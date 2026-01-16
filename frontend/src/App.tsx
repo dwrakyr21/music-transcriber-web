@@ -1,19 +1,46 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 function App() {
-  const [status, setStatus] = useState('');
+  const [activePage, setActivePage] = useState('home');
 
-  useEffect(() => {
-    fetch('http://localhost:5274/health')
-      .then(res => res.json())
-      .then(data => setStatus(data.status))
-      .catch(err => setStatus('Error: ' + err));
-  }, []);
+  const renderContent = () => {
+    switch (activePage) {
+      case 'login':
+        return <p>Login Page Content</p>;
+      case 'contact':
+        return <p>Contact</p>;
+      case 'contact':
+        return <p>Basic View Page Content</p>;
+      default:
+        return <p>Welcome! Please select an option from the menu.</p>;
+    }
+  };
 
   return (
-    <div style={{ padding: '2rem' }}>
-      <h1>React + ASP.NET Core Test</h1>
-      <p>API Status: {status || 'Loading...'}</p>
+    <div>
+      {/* Navigation Menu */}
+      <nav className="navbar is-primary" role="navigation" aria-label="main navigation">
+        <div className="navbar-menu">
+          <div className="navbar-start">
+            <a className="navbar-item" onClick={() => setActivePage('login')}>
+              Login
+            </a>
+            <a className="navbar-item" onClick={() => setActivePage('start')}>
+              Let's Start
+            </a>
+            <a className="navbar-item" onClick={() => setActivePage('contact')}>
+              Contact
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      {/* Page Content */}
+      <section className="section">
+        <div className="container">
+          {renderContent()}
+        </div>
+      </section>
     </div>
   );
 }

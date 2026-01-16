@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MusicTranscriber.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+10676afad409c1e4d3350ca3e0a29a4fe2fb8b63")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+53bf52a960237ef595827af57758f6d3dfaad37a")]
 [assembly: System.Reflection.AssemblyProductAttribute("MusicTranscriber.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MusicTranscriber.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
